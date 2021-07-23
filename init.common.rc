@@ -1,3 +1,6 @@
+# region @maru
+import init.maru.rc
+# endregion
 # zygote need to be started after otapreopt which will be done on post-fs-data
 on zygote-start
     # zygote is started in common init.rc

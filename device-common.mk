@@ -100,3 +100,8 @@ PRODUCT_COPY_FILES += \
 # Dumpstate HAL
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0-service.bonito
+
+# region @maru
+# Ignore SELINUX Neverallows
+SELINUX_IGNORE_NEVERALLOWS := true
+# endregion
