@@ -27,7 +27,9 @@ $(CNE_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /product/etc/cne $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINK)
+# region @maru
+# ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINK)
+# endregion
 
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT)/app/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
