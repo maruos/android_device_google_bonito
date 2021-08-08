@@ -18,4 +18,5 @@
 # add_lunch_combo aosp_bonito-userdebug
 # add_lunch_combo aosp_sargo-userdebug
 add_lunch_combo maru_sargo-userdebug
+add_lunch_combo maru_bonito-userdebug
 # endregion

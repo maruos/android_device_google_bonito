@@ -23,4 +23,5 @@
 
 PRODUCT_MAKEFILES := \
        $(LOCAL_DIR)/maru_sargo.mk \
+       $(LOCAL_DIR)/maru_bonito.mk \
 # endregion
