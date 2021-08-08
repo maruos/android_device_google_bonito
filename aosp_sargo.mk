@@ -19,7 +19,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 $(call inherit-product, device/google/bonito/device-sargo.mk)
-$(call inherit-product-if-exists, vendor/google_devices/bonito/proprietary/device-vendor.mk)
+# region @maru
+# The generated bonito device-vendor.mk will overwrite sargo's device-vendor.mk, and we don't
+# hava a good method to use TARGET_DEVICE to identify current device, because it is not
+# prepared now when calling device-vendor.mk. If you are a developer for sargo/bonito,
+# please copy device-vendor.mk to device-vendor-sargo.mk, and change bonito-vendor-blob.mk to
+# sargo-vendor-blob.mk.
+# $(call inherit-product-if-exists, vendor/google_devices/bonito/proprietary/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/bonito/proprietary/device-vendor-sargo.mk)
+# endregion
 
 PRODUCT_PACKAGES += \
     Dialer \
